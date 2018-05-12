@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>.: Inventio Lite :.</title>
+    <title>Inventario</title>
 
     <!-- Bootstrap core CSS -->
     <link href="res/bootstrap3/css/bootstrap.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-<?php 
+<?php
 $u=null;
 if(Session::getUID()!=""):
   $u = UserData::getById(Session::getUID());
@@ -46,7 +46,7 @@ if(Session::getUID()!=""):
           <li><a href="index.php?view=home"><i class="fa fa-home"></i> Inicio</a></li>
           <li><a href="index.php?view=sell"><i class="fa fa-usd"></i> Vender</a></li>
           <li><a href="index.php?view=sells"><i class="fa fa-shopping-cart"></i> Ventas</a></li>
-          <li><a href="index.php?view=box"><i class="fa fa-archive"></i> Caja <small><span class="label label-success">Nuevo</span></small></a></li>
+          <li><a href="index.php?view=box"><i class="fa fa-archive"></i> Caja </a></li>
           <li><a href="index.php?view=products"><i class="fa fa-glass"></i> Productos</a></li>
           <li><a href="index.php?view=categories"><i class="fa fa-th-list"></i> Categorias </a></li>
           <li><a href="index.php?view=clients"><i class="fa fa-smile-o"></i> Clientes </a></li>
@@ -65,7 +65,7 @@ if(Session::getUID()!=""):
 
 
 <?php if(Session::getUID()!=""):?>
-<?php 
+<?php
 $u=null;
 if(Session::getUID()!=""){
   $u = UserData::getById(Session::getUID());
@@ -92,7 +92,7 @@ if(Session::getUID()!=""){
 
       <div id="page-wrapper">
 
-<?php 
+<?php
   // puedo cargar otras funciones iniciales
   // dentro de la funcion donde cargo la vista actual
   // como por ejemplo cargar el corte actual

@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
-		<h1><i class='glyphicon glyphicon-shopping-cart'></i> Reabastecimientos</h1>
+		<h1><i class='glyphicon glyphicon-shopping-cart'></i> Reabastecedores</h1>
 		<div class="clearfix"></div>
 
 
@@ -39,7 +39,7 @@ $total=0;
 	}
 		echo "<b>$ ".number_format($total)."</b>";
 
-?>			
+?>
 
 		</td>
 		<td><?php echo $sell->created_at; ?></td>

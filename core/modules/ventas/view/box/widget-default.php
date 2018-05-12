@@ -43,7 +43,7 @@ $total=0;
 		$total_total += $total;
 		echo "<b>$ ".number_format($total,2,".",",")."</b>";
 
-?>			
+?>
 
 		</td>
 		<td><?php echo $sell->created_at; ?></td>

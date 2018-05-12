@@ -1,4 +1,4 @@
-    <?php 
+    <?php
 $categories = CategoryData::getAll();
     ?>
 <div class="row">
@@ -13,13 +13,19 @@ $categories = CategoryData::getAll();
       <input type="file" name="image" id="image" placeholder="">
     </div>
   </div>
-
+  <div class="form-group">
+    <label for="inputEmail1" class="col-lg-2 control-label">Presentacion</label>
+    <div class="col-md-6">
+      <input type="text" name="presentation" class="form-control" id="inputEmail1" placeholder="Presentacion del Producto">
+    </div>
+  </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Nombre*</label>
     <div class="col-md-6">
       <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre del Producto">
     </div>
   </div>
+
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Categoria</label>
     <div class="col-md-6">
@@ -55,12 +61,7 @@ $categories = CategoryData::getAll();
     </div>
   </div>
 
-  <div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Presentacion</label>
-    <div class="col-md-6">
-      <input type="text" name="presentation" class="form-control" id="inputEmail1" placeholder="Presentacion del Producto">
-    </div>
-  </div>
+
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Minima en inventario:</label>
     <div class="col-md-6">

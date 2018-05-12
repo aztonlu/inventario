@@ -15,8 +15,8 @@ class ProductData {
 	public function getCategory(){ return CategoryData::getById($this->category_id);}
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",$this->category_id,$this->inventary_min,NOW())";
+		$sql = "insert into ".self::$tablename." (barcode,name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
+		$sql .= "value (\"$this->barcode\",\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",$this->category_id,$this->inventary_min,NOW())";
 		return Executor::doit($sql);
 	}
 	public function add_with_image(){
@@ -59,6 +59,7 @@ class ProductData {
 		$data = new ProductData();
 		while($r = $query[0]->fetch_array()){
 			$data->id = $r['id'];
+			$data->barcode = $r['barcode'];
 			$data->name = $r['name'];
 			$data->price_in = $r['price_in'];
 			$data->price_out = $r['price_out'];
@@ -68,6 +69,7 @@ class ProductData {
 			$data->user_id = $r['user_id'];
 			$data->category_id = $r['category_id'];
 			$data->description = $r['description'];
+			$data->barcode = $r['barcode'];
 			$data->inventary_min = $r['inventary_min'];
 			$data->is_active = $r['is_active'];
 			$found = $data;
@@ -97,6 +99,7 @@ class ProductData {
 			$array[$cnt]->category_id = $r['category_id'];
 			$array[$cnt]->is_active = $r['is_active'];
 			$array[$cnt]->description = $r['description'];
+			$array[$cnt]->barcode = $r['barcode'];
 			$array[$cnt]->inventary_min = $r['inventary_min'];
 
 			$cnt++;
@@ -122,6 +125,7 @@ class ProductData {
 			$array[$cnt]->user_id = $r['user_id'];
 			$array[$cnt]->category_id = $r['category_id'];
 			$array[$cnt]->description = $r['description'];
+			$array[$cnt]->barcode = $r['barcode'];
 			$array[$cnt]->inventary_min = $r['inventary_min'];
 			$array[$cnt]->is_active = $r['is_active'];
 
@@ -132,7 +136,7 @@ class ProductData {
 
 
 	public static function getLike($p){
-		$sql = "select * from ".self::$tablename." where name like '%$p%' or id like '%$p%'";
+		$sql = "select * from ".self::$tablename." where presentation like '%$p%' or id like '%$p%'";
 		$query = Executor::doit($sql);
 		$array = array();
 		$cnt = 0;

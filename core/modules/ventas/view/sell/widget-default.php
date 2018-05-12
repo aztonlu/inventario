@@ -36,7 +36,7 @@ $products_in_cero=0;
 	 foreach($products as $product):
 $q= OperationData::getQYesF($product->id);
 	?>
-	<?php 
+	<?php
 	if($q>0):?>
 		<form method="post" action="index.php?view=addtocart">
 	<tr class="<?php if($q<=$product->inventary_min){ echo "danger"; }?>">
@@ -132,7 +132,7 @@ $product = ProductData::getById($p["product_id"]);
 <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Cliente</label>
     <div class="col-lg-10">
-    <?php 
+    <?php
 $clients = PersonData::getClients();
     ?>
     <select name="client_id" class="form-control">

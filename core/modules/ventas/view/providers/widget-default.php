@@ -7,11 +7,12 @@
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/providers-word.php">Word 2007 (.docx)</a></li>
+    <li><a href="report/providers-word.php">Exportar a Word</a></li>
+		<li><a href="report/providers-word.php">Exportar a Excel</a></li>
   </ul>
 </div>
 </div>
-		<h1>Directorio de Proveedores</h1>
+		<h1>Lista de Proveedores</h1>
 <br>
 		<?php
 

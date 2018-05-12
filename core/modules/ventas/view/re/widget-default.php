@@ -126,7 +126,7 @@ $product = ProductData::getById($p["product_id"]);
 <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Proveedor</label>
     <div class="col-lg-10">
-    <?php 
+    <?php
 $clients = PersonData::getProviders();
     ?>
     <select name="client_id" class="form-control">
