@@ -62,7 +62,6 @@ if($px<=$npaginas):
 	<thead>
 		<th>Codigo</th>
 		<th>Imagen</th>
-		<th>Barras</th>
 		<th>Nombre</th>
 		<th>Precio Entrada</th>
 		<th>Precio Salida</th>

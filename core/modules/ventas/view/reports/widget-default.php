@@ -3,8 +3,8 @@
 	<a href="index.php?view=reportsbyproduct" class="pull-right btn btn-lg btn-default	">Reporte por producto <i class="glyphicon glyphicon-chevron-right"></i> </a>
 	<h1>Reportes</h1>
 <div class="jumbotron" id="wellcome">
-	<h2>Bienvenido al sistema de reportes</h2>
-	<p>Te invitamos a que selecciones un rango de fechas (fecha inicial - fecha final) en las opciones de abajo.</p>
+	<h2>Modulo de reportes</h2>
+	<p>Selecciona las fechas de inicio y final para obtener reportes.</p>
 </div>
 
 <div class="well">

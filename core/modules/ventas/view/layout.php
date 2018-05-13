@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">Inventio Lite <sup><small><span class="label label-danger">v1.8</span></small></sup> </a>
+          <a class="navbar-brand" href="./">Inventario <sup><small><span class="label label-danger"></small></sup> </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,7 +42,7 @@ $u=null;
 if(Session::getUID()!=""):
   $u = UserData::getById(Session::getUID());
 ?>
-          <ul class="nav navbar-nav side-nav">
+          <!--<ul class="nav navbar-nav side-nav">
           <li><a href="index.php?view=home"><i class="fa fa-home"></i> Inicio</a></li>
           <li><a href="index.php?view=sell"><i class="fa fa-usd"></i> Vender</a></li>
           <li><a href="index.php?view=sells"><i class="fa fa-shopping-cart"></i> Ventas</a></li>
@@ -54,10 +54,23 @@ if(Session::getUID()!=""):
           <li><a href="index.php?view=inventary"><i class="fa fa-area-chart"></i> Inventario</a></li>
           <li><a href="index.php?view=re"><i class="fa fa-refresh"></i> Reabastecer <small><span class="label label-success">Nuevo</span></small></a></li>
           <li><a href="index.php?view=res"><i class="fa fa-th-list"></i> Reabastecimientos <small><span class="label label-success">Nuevo</span></small></a></li>
-          <li><a href="index.php?view=reports"><i class="fa fa-tasks"></i> Reportes</a></li>
+          <li><a href="index.php?view=reports"><i class="fa fa-tasks"></i> Reportes</a></li>-->
+          <ul class="nav navbar-nav side-nav">
+          <li><a href="index.php?view=home"> Inicio</a></li>
+          <li><a href="index.php?view=sell"> Vender</a></li>
+          <li><a href="index.php?view=sells">Ventas</a></li>
+          <li><a href="index.php?view=box"> Caja </a></li>
+          <li><a href="index.php?view=products"> Productos</a></li>
+          <li><a href="index.php?view=categories">Categorias </a></li>
+          <li><a href="index.php?view=clients"> Clientes </a></li>
+          <li><a href="index.php?view=providers">Proveedores </a></li>
+          <li><a href="index.php?view=inventary"> Inventario</a></li>
+          <li><a href="index.php?view=re">Reabastecer </a></li>
+          <li><a href="index.php?view=res">Reabastecimientos </a></li>
+          <li><a href="index.php?view=reports"> Reportes</a></li>
           <?php if($u->is_admin):?>
-          <li><a href="index.php?view=users"><i class="fa fa-users"></i> Usuarios </a></li>
-          <li><a href="index.php?view=settings"><i class="fa fa-cogs"></i> Configuracion <small><span class="label label-warning">Experimental</span></small></a></li>
+          <li><a href="index.php?view=users"> Usuarios </a></li>
+          <li><a href="index.php?view=settings"> Configuracion <small><span class="label label-warning">Experimental</span></small></a></li>
         <?php endif;?>
           </ul>
 <?php endif;?>
